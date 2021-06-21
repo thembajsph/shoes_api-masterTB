@@ -1,0 +1,19 @@
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+/* 
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+    position: fixed;    /* Set the navbar to fixed position 
+    top: 0; 
+    width: 100%;   
+    
+} */
+
+hr {
+    clear: both;
+    visibility: hidden;
+}
+/* 
+.list-group-item {
+    padding: 1px;
+} */

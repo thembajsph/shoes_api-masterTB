@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shoe API</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="handlebars-v4.0.5.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="/jquery/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    </script>
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/master.css">
+
+</head>
+
+<body>
+
+
+    <hr>
+    <div class="ui container">
+            <div class="ui labeled icon menu">
+                <div class="active item">
+                    <i class="home icon"></i> <a href="">Home</a>
+                </div>
+                <div class="disabled item">
+                    <i class="info icon"></i> <a href="#">About</a>
+                </div>
+                <div class="right disabled item">
+                    <i class="user icon"></i>
+                    <a href="#">Admin
+                    </a>
+                </div>
+                <!-- <div class="item">
+                    <i class="random icon"></i> <a href="#"></a>
+                </div> -->
+            </div>
+
+            <hr>
+
+            <!-- <div class="ui fluid icon input">
+            <input type="text" placeholder="Search a very wide input...">
+            <i class="search icon"></i>
+            </div> -->
+
+            <hr>
+            <div id="brands" align="center"></div>
+            <br>
+            <!-- <div id="sizes"></div> -->
+            <div id="display"></div>
+            <div class="back_home"></div>
+
+
+        
+    
+    </div>
+    <script src="/javascript/main.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script id="myTable" type="text/x-handlebars-template">
+        <div class="ui four column grid">
+            {{#each data}}
+            <div class="column">
+                <div class="ui fluid card">
+                    <div class="image">
+                            <img src="/images/{{brand}}/{{color}}.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">{{brand}}</div>
+                        <div class="meta">
+                        <a id="{{color}}">{{color}}</a>
+                        </div>
+                        <div class="description">
+                         R{{price}}
+                        </div>
+                        <!-- {{#each stock}}
+                        <div class="ui list">
+                                <a class="item">
+                                  <i class="help icon"></i>
+                                  <div class="content">
+                                    <div class="header">Size: {{this.size}}</div>
+                                    <div class="description">Stock: {{this.qty}}</div>
+                                  </div>
+                                </a>
+                                </div>
+                        {{/each}} -->
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                        Joined in 2013
+                        </span>
+                        <span>
+                        <i class="user icon"></i>
+                        <a href="" id="{{_id}}">Purchase</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+
+    <script id="brandDropdown" type="text/x-handlebars-template">
+        <div class="btn-group btn-group-xs">
+                <a href="#" class="ui secondary basic button" id="findAll">All</a>
+            {{#each uniQBrand}}
+            <a href="#" class="ui secondary basic button">{{this}}</a>
+            {{/each}}
+        </div>
+    </script>
+    <script id="sizeDropdown" type="text/x-handlebars-template">
+        <div class="btn-group btn-group-xs">
+            {{#each uniQSize}}
+            <a href="#" class="ui primary basic button">{{this}}</a>
+            {{/each}}
+        </div>
+    </script>
+</body>
+
+</html>
